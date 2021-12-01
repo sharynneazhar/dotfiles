@@ -20,16 +20,11 @@ This allows you to use Alt/Cmd + Left/Right to edit text on the terminal.
 
 ### Dotfiles
 
-Navigate to your root directory (stay in root unless otherwise noted):
-
-```
-cd ~
-```
-
 Download the dotfiles required for the rest of the setup:
 
 
 ```
+cd ~
 curl -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.gitignore \
   -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.zshrc \
   -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/Brewfile
@@ -59,7 +54,7 @@ Run the following command:
 brew bundle
 ```
 
-Looks for ~/Brewfile and installs its contents.
+Looks for `~/Brewfile` and installs its contents.
 
 ### [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
@@ -88,6 +83,8 @@ git config --global core.excludesfile '~/.gitignore'
 ```
 
 #### [GitAlias](https://github.com/GitAlias/gitalias) 
+
+The best git aliases out there:
 
 ```
 curl -O https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt
@@ -127,4 +124,12 @@ curl -sSL https://get.rvm.io | bash -s stable --rails
 ```
 gem install bundler
 ```
+
+### [VSCode](https://code.visualstudio.com/Download)
+
+Download [VSCode](https://code.visualstudio.com/Download). Once downloaded, turn on "Settings Sync".
+
+Install the `code` command:
+* Hit **Cmd+Shift+P** to open the Command Palette
+* Search for `Shell Command: Install 'code' command in PATH`
 
