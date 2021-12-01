@@ -1,10 +1,49 @@
 # MacOS Dev Environment
 
-Latest: macOS HighSierra v.10.13.3
+Follow step by step and read everything!
 
 ## Software & Tools
 
+### Xcode
+
+First thing is download Xcode from the App Store. This will take a while so let it run in the background and continue onto the next steps.
+
+### [iTerm2](https://iterm2.com/downloads.html)
+
+Download iTerm2 for a better terminal experience. Then, update keymapping for easier navigation:
+
+* Go to iTerm2 Preferences -> Profiles -> Keys -> Key Mappings
+* At the bottom of the window, click "Presets..." dropdown
+* Choose "Natural Text Editing"
+
+This allows you to use Alt/Cmd + Left/Right to edit text on the terminal.
+
+### Dotfiles
+
+Navigate to your root directory (stay in root unless otherwise noted):
+
+```
+cd ~
+```
+
+Download the dotfiles required for the rest of the setup:
+
+
+```
+curl -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.gitignore \
+  -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.zshrc \
+  -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/Brewfile
+```
+
 ### [Homebrew](https://github.com/Homebrew/brew)
+
+An important dependency before Homebrew can work is the **Command Line Developer Tools** for Xcode. These include compilers that will allow you to build things from source. You can install them directly from the terminal with:
+
+```
+xcode-select --install
+```
+
+Once that is done, we can install Homebrew by copy-pasting the installation command:
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -12,17 +51,27 @@ Latest: macOS HighSierra v.10.13.3
 
 #### Brewfile
 
-Download `Brewfile` and run the following command:
+A key feature of Brew is its ability to set up your Mac to a known configuration using a Brewfile.
+
+Run the following command:
 
 ```
 brew bundle
 ```
+
+Looks for ~/Brewfile and installs its contents.
 
 ### [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
+Then, install the following plugins:
+
+* [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
+
 
 ### [Git](https://git-scm.com/)
 
@@ -32,19 +81,17 @@ git config --global user.email "sharynneazhar@gmail.com"
 git config --global credential.helper osxkeychain
 ```
 
+Set up the global `.gitignore` file by running the following:
+
+```
+git config --global core.excludesfile '~/.gitignore'
+```
+
 #### [GitAlias](https://github.com/GitAlias/gitalias) 
 
 ```
 curl -O https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt
 git config --global include.path '~/gitalias.txt'
-```
-
-#### [GitIgnore]()
-
-Download `.gitignore` file and run the following:
-
-```
-git config --global core.excludesfile '~/.gitignore'
 ```
 
 ### [NVM](https://github.com/creationix/nvm)

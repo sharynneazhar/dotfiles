@@ -1,39 +1,23 @@
-tap 'caskroom/cask'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
 
-# Core Homebrew
-brew 'zsh'
-brew 'git'
-brew 'sqlite3'
-brew 'mysql', restart_service: true
-brew 'nvm'
-brew 'npm'
-brew 'yarn'
-brew 'vim'
-brew 'wget'
-brew 'python3'
-brew 'python'
-brew 'docker'
-brew 'docker-compose'
-brew 'heroku'
-brew 'mongodb'
-brew 'redis'
-brew 'mas'
+brew "docker"
+brew "docker-compose"
+brew "gh"
+brew "git"
+brew "mas"
+brew "mysql", restart_service: true
+brew "sqlite"
+brew "python@3.9"
+brew "node"
+brew "nvm"
+brew "redis"
+brew "vim"
+brew "wget"
+brew "yarn"
 
-# Cask Apps
-cask 'google-chrome'
-cask 'visual-studio-code'
-cask 'iterm2'
-cask 'docker'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'filezilla'
-cask 'postman'
-cask 'microsoft-teams'
-cask 'discord'
-cask 'spotify'
-
-# Mac app store
-mas 'Xcode', id: 497799835
-mas 'LastPass', id: 926036361
-mas 'Slack', id: 803453959
-mas 'Magnet', id: 441258766
+mas "Magnet", id: 441258766
+mas "Slack", id: 803453959
+mas "StatusClock", id: 552792489
