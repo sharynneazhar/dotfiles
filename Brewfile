@@ -26,7 +26,6 @@ cask 'iterm2'
 cask 'docker'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
-cask 'sequel-pro'
 cask 'filezilla'
 cask 'postman'
 cask 'microsoft-teams'
@@ -35,8 +34,6 @@ cask 'spotify'
 
 # Mac app store
 mas 'Xcode', id: 497799835
-mas 'GIPHY CAPTURE', id: 668208984
-mas 'Amphetamine', id: 937984704
 mas 'LastPass', id: 926036361
 mas 'Slack', id: 803453959
 mas 'Magnet', id: 441258766

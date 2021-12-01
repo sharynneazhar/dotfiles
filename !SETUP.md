@@ -24,33 +24,11 @@ brew bundle
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-### [Vim-Bootstrap](https://vim-bootstrap.com/)
-
-```
-curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=html&langs=javascript&langs=python&langs=ruby&langs=php&editor=vim' > ~/.vimrc
-vim +PlugInstall +qall
-```
-
-#### [OneDark Theme](https://github.com/joshdick/onedark.vim)
-
-```
-git clone https://github.com/joshdick/onedark.vim.git
-mkdir ~/.vim/colors
-mv ~/Downloads/onedark.vim-master/colors/onedark.vim ~/.vim/colors/onedark.vim
-mv ~/Downloads/onedark.vim-master/autoload/onedark.vim ~/.vim/autoload/onedark.vim
-```
-
-```
-touch ~/.vimrc.local 
-echo "colorscheme onedark" >> ~/.vimrc.local
-echo "let g:airline_theme='onedark'" >> ~/.vimrc.local
-```
-
 ### [Git](https://git-scm.com/)
 
 ```
 git config --global user.name "Sharynne Azhar"
-git config --global user.email "EMAIL"
+git config --global user.email "sharynneazhar@gmail.com"
 git config --global credential.helper osxkeychain
 ```
 
