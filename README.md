@@ -25,9 +25,9 @@ Download the dotfiles required for the rest of the setup:
 
 ```
 cd ~
-curl -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.gitignore \
-  -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.zshrc \
-  -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/Brewfile
+curl -O https://raw.githubusercontent.com/sharynneazhar/dotfiles/main/.gitignore \
+  -O https://raw.githubusercontent.com/sharynneazhar/dotfiles/main/.zshrc \
+  -O https://raw.githubusercontent.com/sharynneazhar/dotfiles/main/Brewfile
 ```
 
 ### [Homebrew](https://github.com/Homebrew/brew)
