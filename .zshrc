@@ -84,6 +84,9 @@ cd ~/Development
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -105,6 +108,8 @@ cd ~/Development
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias openzsh="code ~/.zshrc"
+alias ls='colorls -lA --sd'
 
 # deletes all [gone] remote branches from local
 function gb-clear() {
