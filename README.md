@@ -8,9 +8,9 @@ Follow step by step and read everything!
 
 First thing is download Xcode from the App Store. This will take a while so let it run in the background and continue onto the next steps.
 
-### [iTerm2](https://iterm2.com/downloads.html)
+### iTerm2
 
-Download iTerm2 for a better terminal experience. Then, update keymapping for easier navigation:
+Download [iTerm2](https://iterm2.com/downloads.html) for a better terminal experience. Then, update keymapping for easier navigation:
 
 * Go to iTerm2 Preferences -> Profiles -> Keys -> Key Mappings
 * At the bottom of the window, click "Presets..." dropdown
@@ -22,17 +22,18 @@ This allows you to use Alt/Cmd + Left/Right to edit text on the terminal.
 
 Download the dotfiles required for the rest of the setup:
 
-
 ```
 cd ~
-curl -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.gitignore \
-  -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/.zshrc \
-  -O https://gist.githubusercontent.com/sharynneazhar/af72b6a5f6dc4ad4e48cf1bb7369a94e/raw/d5557a28733f0325f61b745fa4bcbbb64ebf8b9a/Brewfile
+curl -O https://raw.githubusercontent.com/sharynneazhar/dotfiles/main/.gitignore \
+  -O https://raw.githubusercontent.com/sharynneazhar/dotfiles/main/.zshrc \
+  -O https://raw.githubusercontent.com/sharynneazhar/dotfiles/main/Brewfile
 ```
 
-### [Homebrew](https://github.com/Homebrew/brew)
+### Homebrew
 
-An important dependency before Homebrew can work is the **Command Line Developer Tools** for Xcode. These include compilers that will allow you to build things from source. You can install them directly from the terminal with:
+First, check if Xcode is done installing. If so, open Xcode to accept all the license agreements. Otherwise, keep an eye on it and do so when Xcode is done installing.
+
+An important dependency before [Homebrew](https://github.com/Homebrew/brew) can work is the **Command Line Developer Tools** for Xcode. These include compilers that will allow you to build things from source. You can install them directly from the terminal with:
 
 ```
 xcode-select --install
@@ -56,7 +57,9 @@ brew bundle
 
 Looks for `~/Brewfile` and installs its contents.
 
-### [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
+### Oh-My-Zsh
+
+[Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh) is a zsh configuration manager. Download it using the command:
 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -68,7 +71,7 @@ Then, install the following plugins:
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 
 
-### [Git](https://git-scm.com/)
+### Git
 
 ```
 git config --global user.name "Sharynne Azhar"
@@ -82,16 +85,16 @@ Set up the global `.gitignore` file by running the following:
 git config --global core.excludesfile '~/.gitignore'
 ```
 
-#### [GitAlias](https://github.com/GitAlias/gitalias)
+#### GitAlias
 
-The best git aliases out there:
+[GitAlias](https://github.com/GitAlias/gitalias) has the best git aliases out there:
 
 ```
 curl -O https://raw.githubusercontent.com/GitAlias/gitalias/master/gitalias.txt
 git config --global include.path '~/gitalias.txt'
 ```
 
-### [NVM](https://github.com/creationix/nvm)
+### NVM
 
 ```
 mkdir ~/.nvm
@@ -112,7 +115,7 @@ nvm use node
 nvm alias default node
 ```
 
-### [RVM](https://rvm.io/)
+### RVM
 
 ```
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -125,7 +128,7 @@ Export `GEM_HOME`:
 export GEM_HOME="$HOME/.gem"
 ```
 
-### [VSCode](https://code.visualstudio.com/Download)
+### VSCode
 
 Download [VSCode](https://code.visualstudio.com/Download). Once downloaded, turn on "Settings Sync".
 
